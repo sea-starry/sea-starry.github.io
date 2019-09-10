@@ -229,6 +229,162 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/10/python实现简单计算平均分/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/09/10/python实现简单计算平均分/" itemprop="url">python实现简单计算平均分</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-10T23:15:30+08:00">
+                2019-09-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="实现代码："><a href="#实现代码：" class="headerlink" title="实现代码："></a>实现代码：</h2><pre><code class="python"><span class="keyword">from</span> tkinter <span class="keyword">import</span> *
+<span class="keyword">from</span> tkinter <span class="keyword">import</span> messagebox
+<span class="class"><span class="keyword">class</span> <span class="title">AverageOfgrade</span>:</span>
+    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span>
+        win = Tk()
+        win.title(<span class="string">"学生成绩统计"</span>)
+
+        grade1 = Label(win,text=<span class="string">"C++程序设计"</span>)
+        grade1.grid(row=<span class="number">0</span>,column=<span class="number">0</span>,pady=<span class="number">5</span>,padx=<span class="number">5</span>,sticky=<span class="string">"e"</span>)
+        self.number1 = IntVar()
+        entNumber1 = Entry(win,width=<span class="number">15</span>,textvariable=self.number1)
+        entNumber1.grid(row=<span class="number">0</span>,column=<span class="number">1</span>,pady=<span class="number">5</span>,padx=<span class="number">5</span>,sticky=<span class="string">"w"</span>)
+
+        grade2 = Label(win,text=<span class="string">"C++程序设计"</span>)
+        grade2.grid(row=<span class="number">1</span>,column=<span class="number">0</span>,pady=<span class="number">5</span>,padx=<span class="number">5</span>,sticky=<span class="string">"e"</span>)
+        self.number2 = IntVar()
+        entNumber2 = Entry(win,width=<span class="number">15</span>,textvariable=self.number2)
+        entNumber2.grid(row=<span class="number">1</span>,column=<span class="number">1</span>,pady=<span class="number">5</span>,padx=<span class="number">5</span>,sticky=<span class="string">"w"</span>)
+
+        bt_Average = Button(win,text=<span class="string">"计算平均成绩"</span>,command=self.Average)
+        bt_Average.grid(row=<span class="number">4</span>,column=<span class="number">0</span>,columnspan=<span class="number">2</span>,pady=<span class="number">5</span>)
+
+        result = Label(win,text=<span class="string">"平均成绩："</span>)
+        result.grid(row=<span class="number">5</span>,column=<span class="number">0</span>,padx=<span class="number">5</span>,pady=<span class="number">5</span>,sticky=<span class="string">"e"</span>)
+        self.result_number = DoubleVar()
+        getResult = Entry(win,width=<span class="number">15</span>,state=<span class="string">"readonly"</span>,textvariable=self.result_number)
+        getResult.grid(row=<span class="number">5</span>,column=<span class="number">1</span>,padx=<span class="number">5</span>,pady=<span class="number">5</span>,sticky=<span class="string">"w"</span>)
+        win.mainloop()
+
+    <span class="function"><span class="keyword">def</span> <span class="title">Average</span><span class="params">(self)</span>:</span>
+        g1 = float(self.number1.get())
+        g2 = float(self.number2.get())
+        sum =(g1 + g2)/<span class="number">2</span>
+        self.result_number.set(round(sum,<span class="number">2</span>))
+
+AverageOfgrade()
+</code></pre>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/04/Python实现简单数据库查找/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -757,7 +913,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -770,7 +926,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">tags</span>
                 
               </div>
